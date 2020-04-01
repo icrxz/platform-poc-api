@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #
+
+User.create(email: 'igor@gmail.com', name: 'Igor', password: "123456")
 def get_text
   text = ""
   20.times do
@@ -21,7 +23,7 @@ end
     offer_type: Faker::Games::LeagueOfLegends.rank,
     pitch_deck: get_text,
     fundraise_target: Faker::Number.decimal,
-    organization_logo: 'thumbnails/logo.png',
-    organization_thumbnail: 'thumbnails/logo.png'
+    organization_logo: 'logo.png',
+    organization_thumbnail: 'logo.png'
   )
 end

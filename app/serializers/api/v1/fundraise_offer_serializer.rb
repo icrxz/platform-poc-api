@@ -7,7 +7,7 @@ class Api::V1::FundraiseOfferSerializer
              :fundraise_target
 
   attribute :organization_logo_url do |object|
-    AWS_BUCKET.object("logos/#{object.organization_logo}")
+    AWS_BUCKET.object("thumbnails/#{object.organization_logo}")
               .presigned_url(:get)
   end
 
